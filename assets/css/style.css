@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+/** Fonts */
+@font-face {
+    font-family: latoregular;
+    src: url('/assets/fonts/latoregular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: latolight;
+    src: url('/assets/fonts/latolight.ttf') format('ttf');
+}
+
+/** Colors */
+/* #f5f5f5 - pink grey*/
+/* #aaaaaa - text grey*/
+/* #6c6c6c - text grey dark bck*/
+/* #393939 - dark lighter*/
+/* #363636 - dark*/
+/* #333333 - darker*/
+
+body {
+  margin: 0;
+  font-family: latolight, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: latolight, sans-serif;
+  font-weight: lighter;
+
+}
+
+h4 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1em;
+  font-family: latolight, sans-serif !important;
+}
+
+.content {
+  max-width: 1900px;
+  margin: auto;
+}
+
+.header-wrapper {
+  overflow: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/mountain-landscape.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+nav .fa {
+  font-size: 2em;
+  padding: 10px;
+}
