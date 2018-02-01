@@ -5,12 +5,12 @@
 /** Fonts */
 @font-face {
     font-family: latoregular;
-    src: url('/assets/fonts/latoregular.ttf') format('ttf');
+    src: url('/assets/fonts/latoregular.ttf');
 }
 
 @font-face {
     font-family: latolight;
-    src: url('/assets/fonts/latolight.ttf') format('ttf');
+    src: url('/assets/fonts/latolight.ttf');
 }
 
 /** Colors */
@@ -24,19 +24,22 @@
 body {
   margin: 0;
   font-family: latolight, sans-serif;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #aaaaaa;
 }
 
-h1, h2, h3, h4 {
+h1 {
   font-family: latolight, sans-serif;
-  font-weight: lighter;
+  letter-spacing: 10px;
+  font-size: 2em;
+}
 
+h2, h3 {
+  font-family: latoregular, sans-serif;
+  letter-spacing: 10px;
 }
 
 h4 {
-  margin: 0;
-  padding: 10px;
   font-size: 1em;
   font-family: latolight, sans-serif !important;
 }
@@ -51,14 +54,166 @@ h4 {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1900px;
   width: 100vw;
   height: 100vh;
   background-image: url('../images/mountain-landscape.jpg');
   background-position: center;
   background-size: cover;
+  color: white;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-inner {
+  text-align: center;
+  width: 100px;
 }
 
 nav .fa {
   font-size: 2em;
   padding: 10px;
+}
+
+.slogan {
+  text-align: center;
+  letter-spacing: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.slogan h1 {
+  font-size: 3em;
+  font-family: latolight;
+  padding: 15px;
+  margin: 0;
+}
+
+.slogan h2 {
+  font-size: 1.5em;
+  font-family: latolight;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.scroll .fa {
+  font-size: 2em;
+}
+
+section {
+  padding: 25px 55px 25px 55px;
+}
+
+p span
+{
+    display: block;
+}
+
+.aboutme {
+  color: #aaaaaa;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.aboutme img {
+  margin-top: 20px;
+}
+
+.whatido {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  text-align: center;
+}
+
+.whatido h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.whatido .fa {
+  font-size: 3em;
+}
+
+.whatido-block {
+  width: 50%;
+  padding: 15px;
+  border-bottom: 1px solid #F5F5F5;
+  border-right: 1px solid #F5F5F5;
+}
+
+.whatido-block:nth-of-type(3), .whatido-block:nth-of-type(4) {
+  border-bottom: 0;
+}
+
+.whatido-block:nth-of-type(2), .whatido-block:nth-of-type(4) {
+  border-right: 0;
+}
+
+.whatido p {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #363636;
+}
+
+.works h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.work-list {
+  width: 70%;
+}
+
+.work-tools {
+  width: 30%;
+}
+
+
+.darker {
+  background-color: #333333;
+}
+
+.lighter {
+  background-color: #393939;
+}
+
+.contact {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.contact .fa {
+  font-size: 3em;
+}
+
+.contact button .fa {
+  font-size: 1em;
+}
+
+footer {
+  background-color: #ececec;
+  text-align: center;
+  padding: 25px 55px 25px 55px;
 }
