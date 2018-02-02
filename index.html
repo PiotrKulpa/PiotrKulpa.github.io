@@ -47,7 +47,7 @@
 
 					<div class="scroll">
 						<p>SCROLL DOWN</p>
-						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down slide-bottom" aria-hidden="true"></i>
 					</div>
 				</header>
 			</div>
@@ -58,7 +58,7 @@
 					<h1>HI THERE</h1>
 					<p>
 						<span>I am front-end web developer based in Lublin, PL.</span>
-						<span>I have stron passion for anything web related, mostly developing web applications.</span>
+						<span>I have strong passion for anything web related, mostly developing web applications.</span>
 					</p>
 					<p>If you want know more about me just call or email me.</p>
 
@@ -74,7 +74,7 @@
 
 						<p>
 							<span>I develope web apps with JavaScripr, Html and Css.</span>
-							 <span>I use SASS and Vue.js framework.</span>
+							 <span>I use Typescript, SASS and Vue.js framework.</span>
 							 </p>
 
 					</div>
@@ -107,29 +107,73 @@
 				<section class="works">
 					<h1>I'VE WORKED WITH</h1>
 					<div class="work-list">
-						<div class="darker">
+						<div class="darker work-list-inner" data-work=".omero">
 							<h2>OMERO</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cumque temporibus, repudiandae placeat esse nemo totam molestiae vel ab veniam consequatur aut incidunt, autem cupiditate, laborum fugit iure ea? Blanditiis?</p>
+							<p>Translation agency specialising in a broad range of language services. Omero offers not only translation and interpreting services but also comprehensive services in the scope of conferences, trainings and symposia. </p>
 						</div>
-						<div class="lighter">
+						<div class="lighter work-list-inner" data-work=".prodentica">
 							<h2>PRODENTICA</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cumque temporibus, repudiandae placeat esse nemo totam molestiae vel ab veniam consequatur aut incidunt, autem cupiditate, laborum fugit iure ea? Blanditiis?</p>
+							<p>Friendly dental practice service and a relaxed atmosphere should always form a natural part of your visit. Prodentica aims to deliver the highest quality of care, while making you feel at home. Their patients are always first priority and they are always happy to help.</p>
 						</div>
-						<div></div>
-						<div></div>
+						<div class="darker work-list-inner" data-work=".adn">
+							<h2>ANNA DOMICELA NIEMIEC</h2>
+							<p>Anna is an editorial portrait and wedding photographer residing in Poland. As a natural creative, her love for photography as a form of expression became his ultimate path and career in 2007. She pursues portrait shoots as her primary focus as a photographer.</p>
+						</div>
+						<div class="lighter work-list-inner" data-work=".google">
+							<h2>GOOGLE/UDACITY</h2>
+							<p>As member of nanodegree course I had pleasure to participate in many challenges. Here is one of many examples I did.</p>
+						</div>
 					</div>
 					<div class="work-tools">
-						<div>
-							<h2 class="lighter">SKILLS</h2>
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</div>
-						<div></div>
-						<div></div>
-						<div></div>
+
+							<h2 class="">SKILLS</h2>
+							<div class="work-tools-inner omero">
+								<ul>
+									<li>SINGLE PAGE APPLICATION</li>
+									<li>HTML5 + FLEXBOX</li>
+									<li>CSS + SASS</li>
+									<li>JAVASCRIPT + jQUERY</li>
+									<li>CUSTOM SCROLL NAVIGATION</li>
+									<li>POPUPS + SLIDE DOWN MENU</li>
+									<li>GIT</li>
+								</ul>
+								<p>Link: www.omero.pl</p>
+								<p>Github: www.omero.pl</p>
+							</div>
+
+							<div class="work-tools-inner prodentica">
+								<ul>
+									<li>SINGLE PAGE APPLICATION</li>
+									<li>VUE.JS + ROUTING</li>
+									<li>HTML5 + FLEXBOX</li>
+									<li>CSS</li>
+									<li>JAVASCRIPT</li>
+									<li>GIT</li>
+								</ul>
+								<p>Link: www.prodentica.info</p>
+								<p>Github: www.prodentica.info</p>
+							</div>
+
+							<div class="work-tools-inner adn">
+								<ul>
+									<li>WORDPRESS</li>
+									<li>CSS + ANIMATION</li>
+									<li>LIGHTBOX</li>
+								</ul>
+								<p>Link: www.anna-domicela-niemiec.pl/</p>
+							</div>
+
+							<div class="work-tools-inner google">
+								<ul>
+									<li>GAME</li>
+									<li>JAVASCRIPT CANVAS SYSTEM</li>
+									<li>JAVASCRIPT PROTOTYPING</li>
+									<li>ES5 'CLASSES'</li>
+								</ul>
+								<p>Link: https://codepen.io/PiotrKulpa/pen/bYjyQR</p>
+							</div>
+
+
 
 					</div>
 
@@ -141,15 +185,17 @@
 					<p><span>Whether you have an interesting project or just want to say hi,</span>
 					<span>feel free to shoot me a message.</span>
 					</p>
-					<button>Message Me <i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+					<button class="message-me">Message Me <i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+
+					<h2 class="message-me-txt"><a href="mailto:p.kulpa@onet.eu" target="_top">p.kulpa@onet.eu</a></h2>
 				</section>
 
 			</main>
 			<footer class="footer">
 				<h1>STALK ME</h1>
-				<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-				<i class="fa fa-github" aria-hidden="true"></i>
-				<i class="fa fa-codepen" aria-hidden="true"></i>
+				<a href="mailto:p.kulpa@onet.eu"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+				<a href="https://github.com/PiotrKulpa?tab=repositories"><i class="fa fa-github" aria-hidden="true"></i></a>
+				<a href="https://codepen.io/PiotrKulpa/"><i class="fa fa-codepen" aria-hidden="true"></i></a>
 
 				<p>2018 &copy; Piotr Kulpa. Released under Public License. </p>
 			</footer>
