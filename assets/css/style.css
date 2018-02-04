@@ -252,6 +252,10 @@ p span
   display: none;
 }
 
+.work-tools-inner a {
+  color: #aaaaaa;
+}
+
 
 .darker {
   background-color: #333333;
@@ -399,3 +403,64 @@ footer {
     opacity: 1;
   }
 }
+
+/**
+ * ----------------------------------------
+ * Tablets
+ * ----------------------------------------
+ */
+
+ @media screen and (max-width: 750px) {
+
+   h1 {
+
+     letter-spacing: 5px;
+
+   }
+
+   h2, h3 {
+     letter-spacing: 5px;
+   }
+
+   .whatido {
+     padding: 0;
+   }
+
+   .works {
+     padding: 2px;
+   }
+
+   p span {
+     display: inline;
+   }
+
+   .whatido-block a {
+     color: #aaaaaa;
+   }
+
+ }
+
+ /**
+  * ----------------------------------------
+  * Smartphones
+  * ----------------------------------------
+  */
+
+ @media screen and (max-width: 550px) {
+
+   .whatido-block {
+     width: 100%;
+     border-bottom: 1px solid #F5F5F5;
+   }
+
+   .whatido-block:nth-of-type(3), .whatido-block:nth-of-type(4) {
+     border-bottom: 1px solid #F5F5F5;
+   }
+
+
+   .work-list, .work-list-inner, .work-tools {
+     width: 100%;
+   }
+
+
+ }
