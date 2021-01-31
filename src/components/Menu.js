@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { useState, useEffect, useCallback, useContext } from 'react';
-import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 
 import getData from '../utils/getData';
 import LoaderContext from './LoaderContext';
@@ -8,8 +8,7 @@ import LoaderContext from './LoaderContext';
 const Menu = () => {
 
   const [airtableData, setAirtableData] = useState([]);
-  const router = useRouter();
-  const { pathname = ' ' } = router;
+  const { slug: pathname } = useParams();
   const { setLoader } = useContext(LoaderContext);
 
   const getMenu = useCallback(async () => {

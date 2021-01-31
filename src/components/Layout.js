@@ -1,14 +1,13 @@
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import Menu from './Menu';
 import Footer from './Footer';
-import { useRouter } from 'next/router';
+import { useParams } from 'react-router-dom';
 import LoaderContext from './LoaderContext';
 import Loader from './Loader';
 
 const Layout = ({ children }) => {
 
-  const router = useRouter();
-  const { pathname = ' '} = router;
+  const { slug: pathname } = useParams();
   const [isLoading, setIsLoading] = useState({});
 
   const setLoader = (loadingState) => {

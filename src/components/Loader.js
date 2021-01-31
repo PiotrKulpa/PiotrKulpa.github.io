@@ -1,10 +1,10 @@
+import React from 'react'
 import {
   CircularProgressbar,
   buildStyles
 } from "react-circular-progressbar";
 import ChangingProgressProvider from "./ChangingProgressProvider";
 import "react-circular-progressbar/dist/styles.css";
-import { easeQuadInOut } from "d3-ease";
 
 const percentage = 66;
 

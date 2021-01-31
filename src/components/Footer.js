@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback, useContext } from 'react';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import getData from '../utils/getData';
 import LoaderContext from './LoaderContext';
 
@@ -9,8 +9,7 @@ const scroll = Scroll.animateScroll;
 const Footer = () => {
 
   const [airtableData, setAirtableData] = useState([]);
-  const router = useRouter();
-  const { pathname = ' ' } = router;
+  const { slug: pathname } = useParams();
   const { setLoader } = useContext(LoaderContext);
 
   const getFooter = useCallback(async () => {

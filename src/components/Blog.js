@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useContext } from 'react';
 import axios from 'axios';
 import LoaderContext from './LoaderContext';
-import Link from 'next/link';
+import Link from 'react-router-dom';
 
 const Blog = () => {
 
