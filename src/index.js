@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import reducers from './redux';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+// import './assets/css/elegant-font.css';
+// import './assets/css/style.css';
+// import './assets/css/responsive.css';
 
 const store = createStore(reducers);
 

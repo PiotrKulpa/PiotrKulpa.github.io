@@ -1,32 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import { useSelector } from 'react-redux';
 import useAirtableData from './utils/useAirtableData';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
+import WorksPage from './pages/WorksPage';
+import Layout from './components/Layout';
 
 function App() {
 
   const menu = useSelector(({ airtableReducer }) => airtableReducer.loading)
   console.log(menu)
- 
+
   useAirtableData('Menu', 'FETCH_MENU', menu);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout> 
+        <Switch>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/blog">
+            <BlogPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+          </Route>
+          <Route path="/works">
+            <WorksPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Layout>
+    </Router>
   );
 }
 
