@@ -1,7 +1,9 @@
 const initState = {
   loading: false,
   error: false,
-  Menu: []
+  Menu: [],
+  About: [],
+  Work: [],
 }
 
 const airtableReducer = (state = initState, action) => {
@@ -10,6 +12,10 @@ const airtableReducer = (state = initState, action) => {
       return {...state, loading: action.payload};
     case 'FETCH_MENU':
       return {...state, Menu: action.payload};
+    case 'FETCH_ABOUT':
+      return {...state, About: action.payload};
+    case 'FETCH_WORK':
+      return {...state, Work: action.payload};
     default:
       return state
   }

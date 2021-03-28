@@ -22,6 +22,7 @@ const useAirtableData = (tableName, reducerName, reduxData) => {
         dispatch({ type: 'UPDATE_LOADER', payload: true });
         const response = await axios(config);
         const { data: { records = [] } = {} } = response || {};
+        // console.log(records);
         dispatch({ type: reducerName, payload: records });
         dispatch({ type: 'UPDATE_LOADER', payload: false });
       }

@@ -24,7 +24,7 @@ function App() {
     <Router>
       <Layout> 
         <Switch>
-          <Route path="/about">
+          <Route path="/about-me">
             <AboutPage />
           </Route>
           <Route path="/blog">
@@ -33,10 +33,10 @@ function App() {
           <Route path="/contact">
             <ContactPage />
           </Route>
-          <Route path="/works">
+          <Route path="/work">
             <WorksPage />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <HomePage />
           </Route>
         </Switch>

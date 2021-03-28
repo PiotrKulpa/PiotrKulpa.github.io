@@ -1,11 +1,8 @@
 import React from 'react';
+import Work from '../components/Work';
 
 function WorksPage() {
-  return (
-    <div>
-      WORKS
-    </div>
-  )
+  return <Work />;
 }
 
 export default WorksPage;

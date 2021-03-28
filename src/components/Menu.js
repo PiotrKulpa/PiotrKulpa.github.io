@@ -19,7 +19,6 @@ function Menu() {
 
   useAirtableData('Menu', 'FETCH_MENU', airtableData);
 
-  console.log(airtableData)
   return (
     <>
     <nav 
