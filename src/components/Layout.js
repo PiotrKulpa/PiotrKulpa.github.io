@@ -1,11 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
 import Footer from './Footer';
-import {
-  Link,
-  useParams,
-  useLocation,
-} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Layout = (props) => {
   const location  = useLocation();
