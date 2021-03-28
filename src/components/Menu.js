@@ -6,6 +6,8 @@ import {
 import useAirtableData from '../utils/useAirtableData';
 import { useSelector } from 'react-redux';
 
+import './Menu.scss';
+
 function Menu() {
   
   const [menuState, setMenuState] = useState(false);
@@ -30,7 +32,8 @@ function Menu() {
       <div 
         className={`pt-trigger-container ${pathname === '/' ? '' : 'aboutmeNav'}`}
       >
-        <h1>
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <h1 className="custom-logo-wrapper">
           <Link to='/'>
             <a className="custom-logo">
               <button 

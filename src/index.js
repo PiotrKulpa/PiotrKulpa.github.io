@@ -8,6 +8,8 @@ import { createStore } from 'redux';
 import './assets/css/elegant-font.css';
 import './assets/css/style.css';
 import './assets/css/responsive.css';
+import './Global.scss';
+import './Typography.scss';
 
 const store = createStore(reducers);
 

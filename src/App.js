@@ -1,4 +1,3 @@
-// import './App.css';
 import { useSelector } from 'react-redux';
 import useAirtableData from './utils/useAirtableData';
 import {
