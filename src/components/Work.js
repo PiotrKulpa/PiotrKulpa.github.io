@@ -3,17 +3,12 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import useAirtableData from '../utils/useAirtableData';
 import { useSelector } from 'react-redux';
-import FsLightbox from 'fslightbox-react';
-import Masonry from 'react-masonry-component';
-
 
 const Work = () => {
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const [images, setImages] = useState([]);
-  const [images2, setImages2] = useState([]);
-  const [toggler, setToggler] = useState(false);
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
@@ -25,8 +20,6 @@ const Work = () => {
     setViewerIsOpen(false);
   };
 
-  const modalIsOpen = false
-
   const workData = useSelector(({ airtableReducer }) => airtableReducer.Work);
 
 
@@ -36,25 +29,15 @@ const Work = () => {
       return {
         src: url,
         width,
-        height
+        height,
+        title: 'Lorem ipsum'
       }
-
     });
-    const carouselImages = parsedData.map(({src = ''}) => {
-      return {source: src, caption: ''}
-    })
     setImages(parsedData);
-    setImages2(carouselImages);
-
   }, [workData]);
 
-  console.log(images2);
-
-
-  // const result = aboutMeData[0]?.fields?.content || '';
   useAirtableData('Work', 'FETCH_WORK', workData);
 
-  const images3 = [{ source: 'path/to/image-1.jpg' }, { source: 'path/to/image-2.jpg' }]
   return (
     <section className="work">
       <div className="container">
@@ -64,8 +47,21 @@ const Work = () => {
             <h4>my great work</h4>
             <div className="clearfix" />
             <div>
-            {images.length > 0 && <Carousel views={images} />}
-            <Gallery photos={images} />
+            <Gallery photos={images} onClick={openLightbox} />
+              <ModalGateway>
+                {viewerIsOpen ? (
+                  <Modal onClose={closeLightbox}>
+                    <Carousel
+                      currentIndex={currentImage}
+                      views={images.map(x => ({
+                        ...x,
+                        srcset: x.srcSet,
+                        caption: x.title
+                      }))}
+                    />
+                  </Modal>
+                ) : null}
+              </ModalGateway>
             </div>
           </div>
         </div>
