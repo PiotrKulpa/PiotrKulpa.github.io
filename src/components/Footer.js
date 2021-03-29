@@ -12,7 +12,7 @@ const Footer = () => {
     pathname === '/' ? null : <footer className="darkFooter">
       <hr className="footer-line" />
       <div className="container">
-        <div className="row">
+        <div className="row top-footer-icons">
           <div className="col-md-4 col-sm-4">
             <p><i class="fa fa-map-marker" aria-hidden="true"></i></p>
             <p>Opalowa 3<br />Lublin (Poland)</p>

@@ -4,6 +4,8 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import useAirtableData from '../utils/useAirtableData';
 import { useSelector } from 'react-redux';
 
+import './Work.scss';
+
 const Work = () => {
 
   const [currentImage, setCurrentImage] = useState(0);

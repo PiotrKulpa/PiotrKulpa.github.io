@@ -1,11 +1,8 @@
 import React from 'react';
+import Blog from '../components/Blog';
 
 function BlogPage() {
-  return (
-    <div>
-      BLOG
-    </div>
-  )
+  return <Blog />
 }
 
 export default BlogPage;

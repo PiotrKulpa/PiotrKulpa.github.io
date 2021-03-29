@@ -2,6 +2,8 @@ import React from 'react';
 import useAirtableData from '../utils/useAirtableData';
 import { useSelector } from 'react-redux';
 
+import './About.scss'
+
 const About = () => {
 
   const aboutMeData = useSelector(({ airtableReducer }) => airtableReducer.About)
