@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { URL, API_KEY } from '../const/config';
@@ -13,29 +13,40 @@ const useAirtableData = (tableName, reducerName, reduxData) => {
       'Content-Type': 'application/json',
     },
   };
-
+  const [ loading, setLoading] = useState(false);
+  const [ data, setData] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (reduxData.length === 0) {
       const fetchData = async () =>  {
-        dispatch({ type: 'UPDATE_LOADER', payload: true });
+        setLoading(true);
         const response = await axios(config);
         const { data: { records = [] } = {} } = response || {};
-        // console.log(records);
+        // console.log({response});
         dispatch({ type: reducerName, payload: records });
-        dispatch({ type: 'UPDATE_LOADER', payload: false });
+        setLoading(false);
+        setData(records);
+
+       
       }
 
       try {
         fetchData();
+       
       } catch (err) {
         console.log(err);
-        dispatch({ type: 'UPDATE_LOADER', payload: false });
+        setLoading(false);
       }
+
+    
       
     }
   });
+
+  return {
+    loading,
+  }
 
 
 

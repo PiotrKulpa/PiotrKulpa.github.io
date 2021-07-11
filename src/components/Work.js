@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import Loader from '../components/Loader';
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import useAirtableData from '../utils/useAirtableData';
@@ -38,7 +39,9 @@ const Work = () => {
     setImages(parsedData);
   }, [workData]);
 
-  useAirtableData('Work', 'FETCH_WORK', workData);
+  const { loading } = useAirtableData('Work', 'FETCH_WORK', workData);
+
+  if(loading) { return <Loader />}
 
   return (
     <section className="work">

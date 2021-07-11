@@ -23,7 +23,7 @@ export const Blog = () => {
               </div>
               <div className="post-right">
                 <div className="post-image">
-                  <img src="../../assets/img/blog/1.jpg" className="img-responsive" alt />
+                  <img src="../../../assets/img/blog/1.jpg" className="img-responsive" alt />
                 </div>
                 <h5>Lorem ipsum dolor sit amet metus mised.</h5>
                 <p className="info-post">NOVEMBER 21, 2013 | <a className="css3Animate" href="#" title="Comments">4 COMMENTS</a></p>
